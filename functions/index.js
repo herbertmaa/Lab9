@@ -61,8 +61,12 @@ app.get('/movies.html', (request, response) => {
 
 
  
-    var t = {'<>':'div','html':'${Name} ${Playing}'};
-
+    var t = {'<>':'div','html':[
+        {'<>': 'img', 'alt': 'default_logo', 'src': 'https://via.placeholder.com/150.jpg'},
+        {'<>': 'h5', 'html':'${Name}'},
+        {'<>': 'a', 'class': 'Btn Btn--primary', 'href': '#', 'html': 'Advance Tickets'}
+    
+    ]};
 
     var html = json2html.transform(facts,t);
 
