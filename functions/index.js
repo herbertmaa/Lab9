@@ -27,6 +27,32 @@ function getFacts() {
 
 }
 
+function getTerm1() {
+
+
+    const ref = firebaseApp.database().ref('Term/Term1');
+
+    return ref.once('value').then(snap => snap.val());
+
+}
+
+function getTerm2() {
+
+
+    const ref = firebaseApp.database().ref('Term/Term2');
+
+    return ref.once('value').then(snap => snap.val());
+
+}
+
+
+function getTerm3() {
+
+    const ref = firebaseApp.database().ref('Term/Term3');
+    return ref.once('value').then(snap => snap.val());
+
+}
+
 
 
 
@@ -49,6 +75,114 @@ app.get('/', (request, response) => {
         response.render('index', {
            facts
         });
+    })
+});
+
+app.get('/term1.html', (request, response) => {
+
+    response.set('Cache-Control', 'public, max-age = 300, s-maxage=600')
+
+
+    getTerm1().then(facts => {
+
+
+ 
+    var t = {'<>':'div','html':[
+        {'<>': 'h4', 'html':'${course_id}'},
+        {'<>': 'h5', 'html':'${course_name}'},
+        {'<>': 'h6', 'html':'Credits: ${course_credits}'},
+
+    ]};
+
+    var html = json2html.transform(facts,t);
+
+
+    response.send(html);
+ 
+       
+    })
+});
+
+app.get('/term1.json', (request, response) => {
+
+    response.set('Cache-Control', 'public, max-age = 300, s-maxage=600')
+
+    getTerm1().then(facts => {
+
+        response.json(facts);
+
+    })
+});
+
+app.get('/term2.html', (request, response) => {
+
+    response.set('Cache-Control', 'public, max-age = 300, s-maxage=600')
+
+
+    getTerm2().then(facts => {
+
+
+ 
+    var t = {'<>':'div','html':[
+        {'<>': 'h4', 'html':'${course_id}'},
+        {'<>': 'h5', 'html':'${course_name}'},
+        {'<>': 'h6', 'html':'Credits: ${course_credits}'},
+
+    ]};
+
+    var html = json2html.transform(facts,t);
+
+
+    response.send(html);
+ 
+       
+    })
+});
+
+app.get('/term2.json', (request, response) => {
+
+    response.set('Cache-Control', 'public, max-age = 300, s-maxage=600')
+
+    getTerm2().then(facts => {
+
+        response.json(facts);
+
+    })
+});
+
+app.get('/term3.html', (request, response) => {
+
+    response.set('Cache-Control', 'public, max-age = 300, s-maxage=600')
+
+
+    getTerm3().then(facts => {
+
+
+ 
+    var t = {'<>':'div','html':[
+        {'<>': 'h4', 'html':'${course_id}'},
+        {'<>': 'h5', 'html':'${course_name}'},
+        {'<>': 'h6', 'html':'Credits: ${course_credits}'},
+
+    ]};
+
+    var html = json2html.transform(facts,t);
+
+
+    response.send(html);
+ 
+       
+    })
+});
+
+app.get('/term3.json', (request, response) => {
+
+    response.set('Cache-Control', 'public, max-age = 300, s-maxage=600')
+
+    getTerm3().then(facts => {
+
+        response.json(facts);
+
     })
 });
 
@@ -87,6 +221,7 @@ app.get('/movies.json', (request, response) => {
 
     })
 });
+
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
