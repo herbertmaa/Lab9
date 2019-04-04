@@ -87,9 +87,9 @@ app.get('/term1.html', (request, response) => {
 
 
  
-    var t = {'<>':'div','html':[
+    var t = {'<>':'div','class':'course','html':[
         {'<>': 'h6', 'html':'${course_name}'},
-        {'<>': 'p', 'class':'course', 'html':'${course_id} Credits: ${course_credits}'}
+        {'<>': 'p', 'html':'${course_id} Credits: ${course_credits}'}
 
     ]};
 
@@ -122,9 +122,9 @@ app.get('/term2.html', (request, response) => {
 
 
  
-    var t = {'<>':'div','html':[
+    var t = {'<>':'div','class':'course','html':[
         {'<>': 'h6', 'html':'${course_name}'},
-        {'<>': 'p', 'class':'course', 'html':'${course_id} Credits: ${course_credits}'}
+        {'<>': 'p', 'html':'${course_id} Credits: ${course_credits}'}
 
     ]};
 
@@ -157,9 +157,9 @@ app.get('/term3.html', (request, response) => {
 
 
  
-    var t = {'<>':'div','html':[
+    var t = {'<>':'div','class':'course','html':[
         {'<>': 'h6', 'html':'${course_name}'},
-        {'<>': 'p', 'class':'course', 'html':'${course_id} Credits: ${course_credits}'}
+        {'<>': 'p', 'html':'${course_id} Credits: ${course_credits}'}
 
     ]};
 
