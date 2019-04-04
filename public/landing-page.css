@@ -16,14 +16,28 @@ h6 {
     font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700
 }
+nav {
+    flex-direction:  row;
+    justify-content: center;
+}
+.container {
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#bcit {
+    margin: 0 auto !important;
+    width: 70vw;
+}
 header.masthead {
     position: relative;
     background-color: #343a40;
-    background: url(https://www.bcit.ca/images/v4_entrybanners/bcit_home/home_industryexperts2_lrg_sd.jpg) no-repeat center center;
     background-size: cover;
-    padding-top: 8rem;
+   /* padding-top: 8rem;
     padding-bottom: 8rem;
+    */
     height: 600px;
     width:100%;
 }
@@ -102,7 +116,7 @@ header.masthead h1 {
 .call-to-action {
     position: relative;
     background-color: #343a40;
-    background: url(../img/bg-masthead.jpg) no-repeat center center;
+    /*background: url(../img/bg-masthead.jpg) no-repeat center center; */
     background-size: cover;
     padding-top: 7rem;
     padding-bottom: 7rem
@@ -121,4 +135,9 @@ header.masthead h1 {
 footer.footer {
     padding-top: 4rem;
     padding-bottom: 4rem
+}
+@media (max-width: 768px) {
+    .container a {
+        font-size: 2vw;
+    }
 }
