@@ -156,7 +156,6 @@ app.get('/term3.html', (request, response) => {
     getTerm3().then(facts => {
 
 
- 
     var t = {'<>':'div','class':'course','html':[
         {'<>': 'h6', 'html':'${course_name}'},
         {'<>': 'p', 'html':'${course_id} Credits: ${course_credits}'}
