@@ -145,8 +145,33 @@ div.course {
     align-items: center;
     padding-top: 10px;
 }
+#term3descript .card div {
+    border-bottom: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
 @media (max-width: 768px) {
     .container a {
         font-size: 2vw;
+    }
+    .no-gutters .showcase-img {
+        width: 100vw;
+        height: 56vh;
+    }
+}
+/*
+.no-gutters .showcase-img {
+    width: 50vw;
+    height: 56vh;
+}
+*/
+@media (max-width: 515px) {
+    #whatppl {
+        display: none;
     }
 }
