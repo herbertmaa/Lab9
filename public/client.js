@@ -45,10 +45,9 @@ function parseJSON2HTML(myJSON) {
     var divArray = [];
     for (var i = 0; i < myJSON.length; i++) {
         var div = $('<div> </div>');
-        var h6 = $('<h6>' + myJSON[i].course_credits + '</h6');
-        var h4 = $('<h4>' + myJSON[i].course_name + '</h4>');
-        var h5 = $('<h5>' + myJSON[i].course_id + '</h5>');
-        div.append(h4).append(h5).append(h6);
+        var temp1 = $('<h6>' + myJSON[i].course_name + '</h6>');
+        var temp2 = $('<p>' + myJSON[i].course_id + ' Credits: ' + myJSON[i].course_credits + '</p>');
+        div.append(temp1).append(temp2);
         divArray.push(div);
     }
 
