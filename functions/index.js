@@ -87,7 +87,7 @@ app.get('/term1.html', (request, response) => {
 
 
  
-    var t = {'<>':'div','html': 'class', 'course':[
+    var t = {'<>':'div','html':[
         {'<>': 'h6', 'html':'${course_name}'},
         {'<>': 'p', 'class':'course', 'html':'${course_id} Credits: ${course_credits}'}
 
