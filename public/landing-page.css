@@ -29,7 +29,7 @@ nav {
 
 #bcit {
     margin: 0 auto !important;
-    width: 70vw;
+    width: 100vw;
 }
 header.masthead {
     position: relative;
@@ -135,6 +135,15 @@ header.masthead h1 {
 footer.footer {
     padding-top: 4rem;
     padding-bottom: 4rem
+}
+div.course {
+    border-bottom: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
 }
 @media (max-width: 768px) {
     .container a {
